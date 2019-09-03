@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vendor installed stylesheets -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="vendor/angular-xeditable/dist/css/xeditable.css" rel="stylesheet" />
+    <link href="vendor/kendo-ui/styles/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="vendor/kendo-ui/styles/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="vendor/select2/select2.css" rel="stylesheet" />
+    <link href="vendor/toastr/toastr.css" rel="stylesheet" />
+    <link href="vendor/angular-motion/angular-motion.css" rel="stylesheet" />
+    <link href="vendor/bootstrap-additions/bootstrap-additions.css" rel="stylesheet" />
+    <link href="vendor/angular-ui/build/angular-ui.css" rel="stylesheet" />
+    <link href="vendor/angular-ui-select/Default.selectize.css" rel="stylesheet" />
+    <!--<link href="vendor/select2-bootstrap-css/select2-bootstrap.css" rel="stylesheet" />-->
+    <link href="vendor/angular-ui-select/select.css" rel="stylesheet" />
+
+    <!--ng-Grid Style -->
+
+    <link href="css/HeadcountStyle.css" rel="stylesheet" />
+    <link href="vendor/ng-grid/ng-grid.css" rel="stylesheet" />
+    <link href="vendor/trNgGrid/trNgGrid.min.css" rel="stylesheet" />
+    <!-- COP and App Specific Styles -->
+    <link href="css/cop.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/print.css" rel="stylesheet" media="print" />
+</head>
+<body id="ng-app" data-ng-app="app" class="ng-cloak" ng-cloak>
+    <div ng-show="busy" class="ui-widget-overlay" style="z-index: 1001;"></div>
+    <div class="wrapper" ng-controller="SetupCtrl">
+        <div ng-include="'partial/templates/header.tpl.html'"></div>
+        <div ng-include="'partial/templates/nav.tpl.html'"></div>
+        <div>
+            <div ng-view class="view-animate"></div>
+        </div>
+        <div class="push"></div>
+    </div>
+
+    @RenderBody()
+
+    <div ng-include="'partial/templates/footer.tpl.html'"></div>
+    <!-- Vendor JS  -->
+    <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/jquery-form/jquery.form.js"></script>
+    <script type="text/javascript" src="vendor/angular/angular.js"></script>
+
+    <script type="text/javascript" src="vendor/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="vendor/angular-mocks/angular-mocks.js"></script>
+    <script type="text/javascript" src="vendor/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="vendor/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="vendor/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="vendor/lodash/dist/lodash.js"></script>
+    <script type="text/javascript" src="vendor/moment/moment.js"></script>
+    <!-- Old Select2 -->
+    <script type="text/javascript" src="vendor/select2/select2.js"></script>
+    <script type="text/javascript" src="vendor/angular-ui-select2/src/select2.js"></script>
+
+    <!-- New Select2 -->
+    <script type="text/javascript" src="vendor/angular-ui-select/select.js"></script>
+    <!-- New File Upload -->
+    <script src="vendor/FileUpload/angular-file-upload-shim.js"></script>
+    <script src="vendor/FileUpload/angular-file-upload.js"></script>
+    <script src="vendor/FileUpload/FileAPI.min.js"></script>
+
+
+    <script type="text/javascript" src="vendor/toastr/toastr.js"></script>
+
+    <script type="text/javascript" src="vendor/angular-xeditable/dist/js/xeditable.js"></script>
+    <script type="text/javascript" src="vendor/ng-grid/ng-grid.js"></script>
+    <script type="text/javascript" src="vendor/trNgGrid/trNgGrid.min.js"></script>
+    <script type="text/javascript" src="vendor/kendo-ui/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="vendor/fileDialog/nw-fileDialog.js"></script>
+    <script type="text/javascript" src="vendor/FileSaver/FileSaver.js"></script>
+    <script type="text/javascript" src="vendor/FileSaver/Blob.js"></script>
+    <script type="text/javascript" src="vendor/ng-csv/ng-csv.js"></script>
+
+
+    <script type="text/javascript" src="vendor/angular-ui/build/angular-ui.js"></script>
+
+
+
+
+    <script type="text/javascript" src="vendor/angular-strap/angular-strap.js"></script>
+    <script type="text/javascript" src="vendor/angular-strap/angular-strap.tpl.js"></script>
+
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <script type="text/javascript" src="vendor/angular-google-chart/ng-google-chart.js"></script>
+
+    <!-- Main App JS -->
+    <script src="js/setup.js"></script>
+    <script src="js/constants.js"></script>
+
+    <!-- Service JS -->
+    <script src="service/cop.services.js"></script>
+    <script src="service/httpHelpers.js"></script>
+    <script src="service/helpservice.js"></script>
+    <script src="service/reportsservice.js"></script>
+    <script src="service/admin/useradminservice.js"></script>
+    <script src="service/headcount/headcountservice.js"></script>
+    <script src="service/ReportService/ReportService.js"></script>
+    <script src="service/Search/SearchService.js"></script>
+    <script src="service/PendingRequest/PendingRequestService.js"></script>
+
+    <!-- Directives JS -->
+    <script src="directive/cop.directives.js"></script>
+    <script src="directive/adPicker/adPicker.js"></script>
+
+    <script src="directive/attachment/attachment.js"></script>
+    <script src="directive/fileUpload/fileUpload.js"></script>
+
+    <!-- Filters -->
+    <script src="filter/cop.filters.js"></script>
+
+    <!-- Controllers JS -->
+    <script src="partial/admin/config/config.js"></script>
+    <script src="partial/admin/reports/reportsAdminCtrl.js"></script>
+    <script src="partial/admin/lookup/lookupAdmin.js"></script>
+    <script src="partial/admin/user/userAdmin.js"></script>
+    <script src="partial/admin/help/helpAdmin.js"></script>
+    <script src="partial/about/about.js"></script>
+    <script src="partial/reports/reports.js"></script>
+    <script src="partial/headcount/headcountForm.js"></script>
+    <script src="partial/search/searchCtrl.js"></script>
+    <script src="partial/start/startCtrl.js"></script>
+    <script src="partial/pendingRequest/pendingRequestCtrl.js"></script>
+    <script src="partial/reports/reports.js"></script>
+</body>
+</html>
